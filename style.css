@@ -139,6 +139,7 @@ body {
 .banner-box p {
     font-size: 1.2em; /* Readable font size for the paragraph */
     margin-bottom: 25px;
+    font-family: 'Kantumruy Pro', sans-serif;
 }
 
 /* Style the call-to-action button inside the banner */
