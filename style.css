@@ -266,6 +266,12 @@ body {
 .product-card button:hover {
     background-color: #0056b3; /* Darker button color on hover */
 }
+#product-title {
+    text-align: center; /* Center the product title */
+    font-size: 2em; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-family: 'Kantumruy Pro', sans-serif;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
