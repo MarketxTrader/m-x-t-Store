@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market x Trader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+    <nav class="navbar">
+        <a href="#" class="logo-link">
+            <img src="Logo/MT.png" alt="Logo" class="logo">
+        </a>
+
+        <div class="nav-right">
+            <!-- Language Button -->
+            <button id="langBtn">
+                <img src="https://flagcdn.com/w20/gb.png" alt="EN" id="flag-icon">
+                EN
+            </button>
+    </nav>
+    </div>
+
+    <div class="banner-box">
+        <h2 id="banner-title">Welcome to our website</h2>
+        <p id="banner-desc">Discover our amazing products and services. Sign up today to get 10% off your first order!</p>
+    </div>
+
+    <div class="content">
+        <h2 id="product-title">Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="img/book1.png" alt="Product 1">
+                <h3>OPTIONS TRADING FOR SUPPLEMENTAL INCOME</h3>
+                <p>An Interactive Beginner's Guide to Help You Overcome Fear, Manage the Risks, and Start Growing Your Investment Portfolio Today L.G. STOCKWELL</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="img/book2.png" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="img/book3.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="img/book4.jpg" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Market x Trader. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            KH: {
+                bannerTitle: "សូមស្វាគមន៍មកកាន់គេហទំព័រយើងខ្ញុំ",
+                bannerDesc: "ស្វែងយល់អំពីផលិតផល និងសេវាកម្មរបស់យើង។ ចុះឈ្មោះថ្ងៃនេះដើម្បីទទួលបានការបញ្ចុះតម្លៃ 10%!",
+                productTitle: "ផលិតផលរបស់យើង",
+                buyBtn: "ទិញឥឡូវនេះ"
+            },
+            EN: {
+                bannerTitle: "Welcome to our website",
+                bannerDesc: "Learn more about our products and services. Sign up today to get 10% off!",
+                productTitle: "Our Products",
+                buyBtn: "Buy Now"
+            }
+        };
+
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = "KH";
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+            langBtn.textContent = lang === "KH" ? "EN" : "KH";
+
+            document.getElementById('banner-title').textContent = t.bannerTitle;
+            document.getElementById('banner-desc').textContent = t.bannerDesc;
+            document.getElementById('product-title').textContent = t.productTitle;
+            document.querySelectorAll('.buy-btn').forEach(btn => btn.textContent = t.buyBtn);
+        }
+
+        // Toggle language on click
+        langBtn.addEventListener("click", () => {
+            currentLang = currentLang === "KH" ? "EN" : "KH";
+            setLanguage(currentLang);
+        });
+
+        // Set default language
+        setLanguage(currentLang);
+    </script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'Battambang';
+  src: url('fonts/Battambang.woff2') format('woff2'),
+       url('fonts/Battambang.woff') format('woff'),
+       url('fonts/Battambang.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Moul';
+  src: url('fonts/Moul-Regular.woff2') format('woff2'),
+       url('fonts/Moul-Regular.woff') format('woff'),
+       url('fonts/Moul-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  src: url('fonts/KantumruyPro-Medium.woff2') format('woff2'),
+       url('fonts/KantumruyPro-Medium.woff') format('woff'),
+       url('fonts/KantumruyPro-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Basic reset for better consistency */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar container */
+.navbar {
+    background-color: #ffffff; /* Dark background */
+    color: #000000; /* White text */
+    padding: 10px 20px;
+    border-radius: 0px 0px 20px 20px; /* Rounded corners on the right side */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out the logo and links */
+    align-items: center; /* Vertically center the items */
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style the logo */
+.logo {
+    height: 80px; /* Adjust the height of your logo */
+    width: auto;
+}
+
+/* Style the navigation links list */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use Flexbox for horizontal links */
+    gap: 20px; /* Space between the links */
+    
+}
+/* Logo */
+.logo {
+    height: 60px;
+}
+
+/* Right side: Language + Hamburger */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Language Button */
+#langBtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#langBtn:hover {
+    background: #ececec;
+}
+
+#langBtn img {
+    width: 20px;
+    height: auto;
+    border-radius: 3px;
+}
+/* Mobile nav-links hidden by default */
+.nav-links {
+    display: none;
+}
+
+/* Mobile fix */
+@media screen and (max-width: 768px) {
+    .nav-right {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    #langBtn {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* This background color is just for visual contrast */
+    background-color: #f4f4f4; 
+}
+
+/* Style the banner box container */
+.banner-box {
+    background-color: #0300bc; /* A nice blue color */
+    color: #fff; /* White text */
+    padding: 50px 20px; /* Top/bottom and left/right padding */
+    text-align: center; /* Center all content inside */
+    margin-top: 20px; /* Space between the navbar and the banner */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1480px; /* Limit the width on large screens */
+    margin-left: auto;
+    margin-right: auto; /* Center the box on the page */
+}
+
+/* Style the text inside the banner */
+.banner-box h2 {
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 10px;
+    font-family: Moul;
+}
+
+.banner-box p {
+    font-size: 1.2em; /* Readable font size for the paragraph */
+    margin-bottom: 25px;
+}
+
+/* Style the call-to-action button inside the banner */
+
+/* Optional: Media Query for smaller screens */
+@media (max-width: 768px) {
+    .banner-box {
+        padding: 40px 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .banner-box h2 {
+        font-size: 2em;
+    }
+    
+    .banner-box p {
+        font-size: 1em;
+    }
+}
+.container {
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    padding: 0 20px; /* Horizontal padding */
+    
+}
+.container h1 {
+    text-align: center; /* Center the main heading */
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+.container p {
+    font-size: 1.1em; /* Readable font size for paragraphs */
+    line-height: 1.6; /* Improve line spacing for readability */
+    margin-bottom: 15px; /* Space below each paragraph */
+    text-align: justify; /* Justify text for a cleaner look */
+    font-family: 'Battambang', sans-serif;
+}
+.container img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    margin: 20px auto; /* Center the image and add vertical spacing */
+    border-radius: 8px; /* Slightly rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.container ul {
+    list-style-type: disc; /* Use disc bullets for unordered lists */
+    padding-left: 20px; /* Indent the list */
+    margin-bottom: 15px; /* Space below the list */
+}
+.container ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-family: 'Battambang', sans-serif;
+}
+.container a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+.container a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+.product-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px; /* Space above the grid */
+}
+.product-card {
+    background-color: #ffffff; /* White background for product cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner padding */
+    text-align: center; /* Center content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+.product-card img {
+    max-width: 100%; /* Ensure product images are responsive */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+}
+.product-card h3 {
+    font-size: 1.2em; /* Font size for product titles */
+    margin: 10px 0; /* Space above and below the title */
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+.product-card p {
+    font-size: 1em; /* Font size for product descriptions */
+    color: #555; /* Dark gray text */
+    margin-bottom: 10px; /* Space below the description */
+    font-family: 'Battambang', sans-serif;
+}
+.product-card .price {
+    font-size: 1.1em; /* Font size for the price */
+    color: #28a745; /* Green color for the price */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 15px; /* Space below the price */
+}
+.product-card button {
+    background-color: #007BFF; /* Button background color */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for the button */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+.product-card button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px; /* Reduce horizontal padding on smaller screens */
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+    
+    .container h1 {
+        font-size: 2em; /* Slightly smaller heading on small screens */
+    }
+    
+    .container p, .container ul li {
+        font-size: 1em; /* Adjust font size for better readability */
+    }
+    .product-card{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}  
+footer {
+    background-color: #0300bc; /* Dark background for the footer */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Vertical padding */
+    margin-top: 40px; /* Space above the footer */
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1em; /* Standard font size */
+}
+footer a {
+    color: #ffd700; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+footer a:hover {
+    color: #ffa500; /* Darker color on hover */
+}
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px; /* Reduce padding on smaller screens */
+    }
+    
+    footer p {
+        font-size: 0.9em; /* Slightly smaller text for better fit */
+    }
+}
